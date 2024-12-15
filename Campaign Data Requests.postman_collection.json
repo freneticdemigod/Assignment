@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "84ab0579-23b1-4bd2-a710-e8945a507b40",
+		"name": "Campaign Data Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33021050"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/agents/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sahil Roy\",\r\n    \"language\": \"English\",\r\n    \"voice_id\": \"voice321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/agents/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"agents",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Summer Promotion Campaign\",\r\n    \"type\": \"Inbound\",\r\n    \"phone_number\": \"+9876543210\",\r\n    \"status\": \"Running\",\r\n    \"agents\": [1, 2] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaign-results/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Call Result 2\",\r\n    \"type\": \"Inquiry\",\r\n    \"phone\": \"+9876543210\",\r\n    \"cost\": 15.0,\r\n    \"outcome\": \"Pending\",\r\n    \"call_duration\": 3.5,\r\n    \"recording\": \"http://example.com/recording2.mp3\",\r\n    \"summary\": \"The customer had several questions about the new product.\",\r\n    \"transcription\": \"Hello, I have a few questions about your new product...\",\r\n    \"campaign\": 1  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaign-results/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaign-results",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
